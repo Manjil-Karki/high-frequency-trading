@@ -36,7 +36,7 @@ async def main():
         while True:
             res = await tscm.recv()
             df.loc[len(df)] = res
-            await process_message(res)
+            process_message(res)
 
     await client.close_connection()
 
